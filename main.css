@@ -1,32 +1,52 @@
 * {
-	margin: 0;
+	/*margin: 0;*/
 }
 
 ul { padding: 0; }
 ul li {
 	list-style-type: none;
 	display: inline;
+	line-height: 2;
 }
 
+img { max-width: 100%; }
+
 header {
-	display: flex;
-	flex-flow: row wrap;
 	background-color: rgb(200,200,200);
 }
 
 body {
-	font-family: sans-serif;
+	font-family: -apple-system, sans-serif;
+	font-weight: lighter;
+	font-size: 18px;
 	max-width: 320px;
 	line-height: 1.4;
+	text-align: center;
+}
+
+h1, h2 {
+	font-family: "gill sans";
 }
 
 main {
 	background-color: rgb(230,230,230);
 }
 
-section.prices .item {
-	min-width: 100%;
-	height: 100px;
-	background-color: rgb(50,50,150);
-	margin: 1px;
+.process .item {
+	display: flex;
+	text-align: left;
 }
+
+.prices .item {
+	display: flex;
+	text-align: left;
+}
+
+.item {
+	margin-top: 10px;
+}
+
+.prices {
+	background-color: rgb(240,240,240);
+}
+
