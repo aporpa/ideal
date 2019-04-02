@@ -32,21 +32,48 @@ main {
 	background-color: rgb(230,230,230);
 }
 
-.process .item {
-	display: flex;
-	text-align: left;
-}
-
-.prices .item {
-	display: flex;
-	text-align: left;
-}
-
-.item {
-	margin-top: 10px;
-}
 
 .prices {
 	background-color: rgb(240,240,240);
+	max-width: 1280px;
+	margin: auto;
+}
+
+.item p {
+	max-width: 60%;
+	margin: auto;
+}
+
+.item {
+	flex-flow: nowrap;;
+}
+
+
+@media only screen and (min-width: 321px) {
+	body {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	.item {
+		margin-top: 10px;
+		display: flex;
+		flex-flow: row nowrap;
+		text-align: left;
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.item {
+		max-width: 33%;
+	}
 }
 
