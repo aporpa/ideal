@@ -1,21 +1,32 @@
-* {
-	/*margin: 0;*/
+* { /*margin: 0;*/
+	/*outline: 1px solid grey;*/
 }
 
-ul { padding: 0; }
-ul li {
+ul {
 	list-style-type: none;
-	display: inline;
-	line-height: 2;
+	line-height: 3;
+	padding: 0;
 }
 
-img { max-width: 100%; }
+h1, h2 { font-family: "gill sans"; }
 
-header {
-	background-color: rgb(200,200,200);
+img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: scale-down;
+}
+
+section {
+	padding-top: 2rem;
+}
+
+h2 {
+	padding-bottom: 1rem;
+	font-size: 2rem;
 }
 
 body {
+	margin: 0px;
 	font-family: -apple-system, sans-serif;
 	font-weight: lighter;
 	font-size: 18px;
@@ -24,28 +35,26 @@ body {
 	text-align: center;
 }
 
-h1, h2 {
-	font-family: "gill sans";
-}
-
 main {
-	background-color: rgb(230,230,230);
+	background-color: rgb(94,179,240);
+	color: rgb(255,255,255);
 }
 
-
-.prices {
-	background-color: rgb(240,240,240);
-	max-width: 1280px;
+.faq, .deals {
+	text-align: left;
+	max-width: 90%;
 	margin: auto;
 }
 
-.item p {
-	max-width: 60%;
-	margin: auto;
+.prices img {
+	max-height: 150px;
 }
 
-.item {
-	flex-flow: nowrap;;
+.prices .container {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
 
@@ -56,24 +65,38 @@ main {
 }
 
 @media only screen and (min-width: 500px) {
-	.container {
+	.work-process .container {
+		display: -webkit-flex;
 		display: flex;
-		flex-flow: row wrap;
 		justify-content: space-around;
+		max-width: 85%;
+		margin: auto;
 	}
-
-	.item {
-		margin-top: 10px;
+	.work-process .container .item {
+		display: -webkit-flex;
 		display: flex;
-		flex-flow: row nowrap;
-		text-align: left;
-		max-width: 50%;
-	}
-}
-
-@media screen and (min-width: 800px) {
-	.item {
 		max-width: 33%;
+		text-align: left;
+		align-items: center;
+	}
+	.work-process p {
+		max-width: 300px;
+		margin-left: 1rem;
+	}
+	main { font-size: 1.8rem; font-weight: normal; }
+	main h1 {
+		max-width: 60%;
+		margin: auto;
+		padding: 1rem;
+	}
+	main p {
+		font-size: 1.5rem;
+		max-width: 40%;
+		margin: auto;
+		padding: 1rem;
+	}
+	.faq, .deals {
+		max-width: 56%;
+		margin: auto;
 	}
 }
-
